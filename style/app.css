@@ -1,0 +1,93 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: #4f518c;
+  --textColor: #907ad6;
+  --lightColor: #7fdeff;
+  --darkColor: #2c2a4a;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 400px;
+  height: 50px;
+  background-color: red;
+  display: flex;
+}
+
+.wrapper .icon {
+  width: 50px;
+  height: 100%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--darkColor);
+  background-color: var(--lightColor);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.wrapper input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.wrapper .icon .fa-eye-slash {
+  display: none;
+}
+
+.wrapper .icon.active .fa-eye-slash {
+  display: block;
+}
+
+.wrapper .icon.active .fa-eye {
+  display: none;
+}
